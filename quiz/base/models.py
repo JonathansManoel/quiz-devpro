@@ -8,7 +8,7 @@ from jsonfield import JSONField
 class Pergunta(models.Model):
     enunciado = models.TextField()
     disponivel = models.BooleanField(default=False)
-    alternativas = JSONField()
+    alternativas = models.JSONField()
     alternativa_correta = models.IntegerField(choices=[
         (0, 'A'),
         (1, 'B'),
