@@ -2,7 +2,6 @@ from django.db import models
 
 
 # Create your models here.
-from jsonfield import JSONField
 
 
 class Pergunta(models.Model):
@@ -15,3 +14,6 @@ class Pergunta(models.Model):
         (2, 'C'),
         (3, 'D'),
     ])
+
+    def __str__(self):
+        return self.enunciado
